@@ -1,0 +1,80 @@
+Livros--------------------------------
+    POST- Adicionar
+    http://localhost:3000/livros
+
+        {
+        "nome": "Dom Casmurro",
+        "autores": "Machado de Assis",
+        "data_publicacao": "01-01-1899",
+        "qtd_paginas": 256,
+        "num_edicao": 1,
+        "categoria": "LITERATURA",
+        "status": "DISPONIVEL"
+        }
+
+    GET- Listar todos
+    http://localhost:3000/livros
+
+    GET- Listar por nome
+    http://localhost:3000/livros/nome/(nome do livro)
+
+    GET- Listar por cópias
+    http://localhost:3000/livros/copias
+
+    PUT- Atualizar
+    http://localhost:3000/livros/(id do livro)
+
+    DELETE- Deletar
+    http://localhost:3000/livros/(id do livro)
+
+
+
+Usuários------------------------------
+    POST- Adicionar
+    http://localhost:3000/usuarios
+
+        {
+        "nome": "Taylanne",
+        "cpf": "12345678900",
+        "telefone": "63999999999",
+        "email": "taylanne@gmail.com"
+        }
+
+
+    GET- Listar por CPF
+    http://localhost:3000/usuarios/(cpf do usuário)
+
+    DELETE- Deletar
+    http://localhost:3000/usuarios/(id do usuário)
+
+
+
+Emprestimo------------------------------
+    POST- Adicionar
+    http://localhost:3000/emprestimos
+
+        {
+        "id_livro": 1,
+        "id_usuario": 1,
+        "data_emprestimo": "16-04-2026",
+        "data_vencimento": "23-04-2026",
+        "status": "ATRASADO, ATIVO OU CONCLUIDO"
+        }
+
+    PUT- Atualizar
+        {
+        "id_livro": 2,
+        "id_usuario": 1,
+        "data_emprestimo": "16-04-2026",
+        "data_vencimento": "25-04-2026",
+        "status": "ATRASADO, ATIVO OU CONCLUIDO"
+        }
+
+    GET- Listar todos
+    http://localhost:3000/emprestimos
+
+    GET- Listar por usuário
+    http://localhost:3000/emprestimos/usuario/(id do usuário)
+
+    GET- Listar por status
+    http://localhost:3000/emprestimos/status/(ATIVO, ATRASADO, CONCLUIDO)
