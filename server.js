@@ -3,6 +3,7 @@ const express = require("express");
 
 //iniciação do servidor 
 const app = express();
+const PORT = 3000;
 
 app.use(express.json());
 
